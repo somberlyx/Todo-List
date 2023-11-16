@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFCBFF, #C1D2DC);
+  padding: 10px;
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.600);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.todo-list h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.todo-list h1 span {
+  letter-spacing: 2px;
+  color: #414141;
+}
+
+.todo-list h1 img{
+  width: 60px;
+  transform: rotate(15deg);
+  margin-left: 10px;
+}
+
+.input-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-todo button {
+  width: 80px;
+  height: 35px;
+  border-radius: 20px;
+  margin-left: -80px;
+  border: 1px solid #FFCBFF;
+  font-weight: bold;
+  color: white;
+  background-color: #f690ff;
+  transition: opacity 0.15s;
+  transition: background-color 0.15s;
+  font-size: 14px;
+}
+
+.input-todo button:hover {
+  background-color: #fff;
+  color: #f690ff;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.input-todo button:active {
+  opacity: 0.6;
+  padding: 2px;
+}
+
+.input-todo input {
+  max-width: 400px;
+  flex: 1;
+  height: 35px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: rgb(122, 122, 122);
+}
+
+.input-todo input:focus {
+  outline: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 20px;
+  padding: 12px 8px 12px 50px; 
+  margin: 28px 22px 0px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border: 50px;
+  background-image: url(images/circle-outline-svgrepo-com\(1\).svg);
+  background-size: cover;
+  background-position: center;
+  left: 10px;
+  bottom: 11px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+  position: relative;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border: 50px;
+  background-image: url(images/checked-tick-svgrepo-com\(1\).svg);
+  background-size: cover;
+  background-position: center;
+  left: 10px;
+  bottom: 11px;
+}
+
+ul li img {
+  position: absolute;
+  right: 0; 
+  bottom: 8px;
+  width: 40px;
+  height: 35px;
+  text-align: center;
+}
+
+img{
+  width: 18px;
+}
+
+ul li img:hover {
+  background-color: #d6d6d6;
+  background-color: #ff5f5f;
+  border-radius: 50%;
+}
